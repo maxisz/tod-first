@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Room;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,4 @@ Route::get('/create', function() {
  return view('tod.create');
 });
 
-Route::get('/room/{session_code}', function($session_code){
-
-    return view('tod.room');
-});
+Route::get('/room/{session_code}', [Room::class, 'index']);

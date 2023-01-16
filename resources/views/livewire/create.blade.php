@@ -1,4 +1,8 @@
 <div>
+
+  <div wire:poll>
+    Current time: {{ now() }}
+</div>
       <div class="container">
     <h1>Create a Room</h1>
      @if(Session::get('session_code'))

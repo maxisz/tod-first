@@ -31,7 +31,7 @@ class Create extends Component
             'session_code' => $this->session_code ,
         ];
         DB::table('rooms')->insert($data);
-        Session::put('session_code', $this->session_code);
+        Session::put($data);
         Session::put('is_admin', true);
         return redirect()->to('/room/'.$this->session_code);
 
