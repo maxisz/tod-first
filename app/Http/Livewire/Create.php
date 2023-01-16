@@ -16,10 +16,10 @@ class Create extends Component
 
     public function mount()
     {
-       
 
-        
-       
+
+
+
         $this->session_code = rand(100000,999999);
     }
     public function create()
@@ -32,8 +32,9 @@ class Create extends Component
         ];
         DB::table('rooms')->insert($data);
         Session::put('session_code', $this->session_code);
+        Session::put('is_admin', true);
         return redirect()->to('/room/'.$this->session_code);
-        
+
     }
     public function render()
     {

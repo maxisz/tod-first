@@ -1,7 +1,7 @@
 <div>
       <div class="container">
     <h1>Waiting Room</h1>
-    <p>You are in room: <strong id="room-name">FUN TIMES</strong></p>
+    <p>You are in room: <strong id="room-name">{{ Session::get('room_name'); }}</strong></p>
     <p>Session code: <strong id="session-code">123456</strong></p>
     <p>Players:</p>
     <ul id="player-list">
@@ -16,5 +16,6 @@
       <li>The player must then complete the truth or dare prompt.</li>
       <li>The game continues until all players have completed their turn.</li>
     </ol>
+    <button> Start Game </button> <button> exit Game </button>
   </div>
 </div>
